@@ -1,0 +1,21 @@
+[project]
+name = "mcp_server_konwledge_service"
+version = "0.1.1"
+description = "mcp_server_konwledge_service"
+readme = "README.md"
+authors = [
+    { name = "jieyu", email = "26741980@qq.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "mcp>=1.0.0",
+    "pydantic>=2.11.3", 
+]
+
+[tool.hatch.build.targets.wheel]
+packages = [{ include = "mcp_server_konwledge_service", from = "src" }]
+
+
+[project.scripts]
+mcp_server_konwledge_service = "mcp_server_konwledge_service.server:main"
+

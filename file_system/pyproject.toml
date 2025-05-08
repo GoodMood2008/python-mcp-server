@@ -1,0 +1,22 @@
+[project]
+name = "mcp_server_file_system"
+version = "0.1.0"
+description = "mcp_server_file_system"
+readme = "README.md"
+authors = [
+    { name = "jieyu", email = "26741980@qq.com"  }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "mcp>=1.0.0",
+    "pydantic>=2.11.3",
+]
+
+
+[tool.hatch.build.targets.wheel]
+packages = [{ include = "mcp_server_file_system", from = "src" }]
+
+
+[project.scripts]
+mcp_server_file_system = "mcp_server_file_system.server:main"
+
